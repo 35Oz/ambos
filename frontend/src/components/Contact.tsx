@@ -67,7 +67,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/send-email', {
+      const response = await axios.post('https://ambos.onrender.com/api/send-email', {
         ...formData
         
       });
