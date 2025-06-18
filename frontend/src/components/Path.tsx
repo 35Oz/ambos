@@ -36,6 +36,16 @@ const trayectoria = [
         study: 'DOCENTE',
         description: 'MATERIA "PRÁCTICA PROFESIONAL NOTARIAL" DE LA FACULTAD DE DERECHO DE LA UNIVERSIDAD DE BUENOS AIRES.'
     },
+        {
+        year: '2022',
+        study: 'DOCENTE',
+        description: 'GRADUADA EN FORMACIÓN DOCENTE DE LA FACULTAD DE DERECHO DE LA UNIVERSIDAD DE BUENOS AIRES.'
+    },
+        {
+        year: '2023 - Actualidad',
+        study: 'DOCENTE',
+        description: 'MIEMBRO DEL INSTITUTO DE MESA DE ASESORAMIENTO AL PÚBLICO DEL COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES.'
+    },
 ];
 
 const extras = [
@@ -94,6 +104,18 @@ const extras = [
         type: 'MIEMBRO',
         description: 'MIEMBRO DEL INSTITUTO DE DERECHO CIVIL DEL COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES.'
     },
+    {
+        year: '',
+        type: 'ASESORA',
+        description: 'ASESORAMIENTO BRINDADO EN LA CAMPAÑA DE SERVICIO Y ORIENTACIÓN A LA COMUNIDAD "CUIDÁ LO TUYO" ORGANIZADA POR EL COLEGIO DE ESCRIBANOS DE LA CIUDAD DE BUENOS AIRES EN DISTINTAS SEDES DESTINADAS AL FIN.'
+    },
+        {
+        year: '2023',
+        type: 'JORNADA',
+        description: 'JORNADA NOTARIAL ARGENTINA, MAR DEL PLATA. PONENTE. EXPOSITORA Y REDACTORA. MAYO 2023.'
+    },
+    
+
 ];
 
 const Path = () => {

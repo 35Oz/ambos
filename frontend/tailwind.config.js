@@ -12,6 +12,9 @@ export default {
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],
         alegreya: ['Alegreya', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+
       },
       animation: {
         scaleIn: 'scaleIn 0.5s ease-in-out',

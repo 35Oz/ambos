@@ -1,5 +1,7 @@
 @import "@fontsource/playfair-display";
 @import '@fontsource/alegreya';
+@import '@fontsource/poppins';
+@import '@fontsource/montserrat';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,7 +1,12 @@
 import { MapPin, Phone, Mail, Clock, MoveRight, RefreshCw } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Map from './Map';
 import axios from 'axios';
+import '@fontsource/poppins';
+import divider from '../assets/images/dividers/divider7.svg';
+import divider2 from '../assets/images/dividers/divider8.svg';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -89,8 +94,22 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="relative py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="contacto" className="relative  bg-gray-50">
+        <img 
+        src={divider}
+        alt="Divider"
+        className="absolute w-full h-[16vh] sm:h-[15vh] md:h-[12vh] lg:h-[19vh] z-10 transition-opacity duration-500"
+      />
+      <motion.div
+            initial={{ opacity: 0}}
+            whileInView={{ opacity: 1}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+        <Map />
+      </motion.div>
+      
+      <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row justify-center items-start gap-32 max-w-6xl mx-auto">
           <motion.form
             initial={{ opacity: 0, x: -20 }}
@@ -98,63 +117,52 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             onSubmit={handleSubmit} 
-            className="w-full md:w-1/2 space-y-6 bg-white shadow-2xl p-10 rounded-lg"
+            className="w-full md:w-1/2 space-y-6 bg-white shadow-2xl p-10 "
           >
-            <h2 className="text-3xl font-bold text-center mb-8">Contáctenos</h2>
-            
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Nombre
-              </label>
+             
+            <h2 className="text-4xl font-bold text-center mb-8 font-playfair">CONTÁCTENOS</h2>
+            <div className="space-y-4">
               <input
                 type="text"
-                id="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#edbb5f] focus:border-transparent"
+                placeholder="NOMBRE"
+                className="w-full border-b border-gray bg-transparent focus:outline-none py-2 placeholder:text-black"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Correo Electrónico
-              </label>
               <input
                 type="email"
                 id="email"
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#edbb5f] focus:border-transparent"
+                placeholder="CORREO ELECTRÓNICO"
+                className="w-full border-b border-gray bg-transparent focus:outline-none py-2 placeholder-black"
               />
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                WhatsApp
-              </label>
               <input
                 type="tel"
                 id="phone"
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#edbb5f] focus:border-transparent"
+                placeholder="NÚMERO DE WHATSAPP"
+                className="w-full border-b border-gray bg-transparent focus:outline-none py-2 placeholder-black"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Mensaje
-              </label>
+
               <textarea
                 id="message"
                 required
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#edbb5f] focus:border-transparent"
+                placeholder="MENSAJE"
+                className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-[#edbb5f] focus:border-transparent placeholder-black"
               />
             </div>
 
@@ -188,18 +196,21 @@ const Contact = () => {
             {error && (
               <p className="fixed  top-16 left-1/2 transform -translate-x-1/2 p-4 bg-red-500 text-white rounded-lg shadow-lg">{error}</p>
             )}
-
             <button
               type="submit"
               disabled={loading}
-              className="relative group w-full bg-black text-[#edbb5f] font-bold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="relative group inline-flex items-center gap-2 bg-black text-[#edbb5f] px-6 py-3 
+                border-2 border-black transition-all duration-300 hover:border-transparent hover:pl-8 hover:pr-12 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
             >
-              <div className="flex items-center justify-center">
-                <span className="mr-2">
-                  {loading ? 'Enviando...' : 'Enviar Mensaje'}
-                </span>
-                <MoveRight className="w-5 h-5" />
-              </div>
+              <span className="relative z-10 transform transition-transform duration-500 group-hover:-translate-x-3">
+                {loading ? 'Enviando...' : 'Enviar'}
+              </span>
+
+              <MoveRight
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 text-[# edbb5f]
+                opacity-0 group-hover:opacity-100 transition-all duration-500"
+                style={{ width: '20px', height: '20px' }}
+              />
             </button>
           </motion.form>
 
@@ -214,10 +225,9 @@ const Contact = () => {
               <div className="bg-black p-3 rounded-full">
                 <MapPin className="w-8 h-8 text-[#edbb5f]" />
               </div>
-              <div>
-                <h3 className="font-semibold text-lg mb-2">Nuestra Oficina</h3>
-                <p className="text-gray-600">Uruguay 485, piso 7, oficina B</p>
-                <p className="text-gray-600">A una cuadra del Palacio de Justicia</p>
+              <div >
+                <h3 className="font-semibold text-lg mb-2">NUESTRA OFICINA</h3>
+                <p className="text-gray-600">Ayacucho 984 6to A</p>
               </div>
             </div>
 
@@ -226,9 +236,8 @@ const Contact = () => {
                 <Phone className="w-6 h-6 text-[#edbb5f]" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">Teléfonos</h3>
+                <h3 className="font-semibold text-lg mb-2">TELÉFONOS</h3>
                 <p className="text-gray-600">2198-8391</p>
-                <p className="text-gray-600">5950-3654</p>
               </div>
             </div>
 
@@ -237,9 +246,8 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-[#edbb5f]" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">Correo Electrónico</h3>
-                <p className="text-gray-600">villahoz@escribaniavillahoz.com.ar</p>
-                <p className="text-gray-600">contacto@escribaniavillahoz.com.ar</p>
+                <h3 className="font-semibold text-lg mb-2">MAILS</h3>
+                <p className="text-gray-600">vivianavillahoz@hotmail.com</p>
               </div>
             </div>
 
@@ -248,14 +256,21 @@ const Contact = () => {
                 <Clock className="w-6 h-6 text-[#edbb5f]" />
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">Horario</h3>
+                <h3 className="font-semibold text-lg mb-2">HORARIO</h3>
                 <p className="text-gray-600">Lunes a Viernes</p>
-                <p className="text-gray-600">9 a 17 hs</p>
+                <p className="text-gray-600">10 a 17 hs</p>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
+      <img 
+        src={divider2}
+        alt="Divider"
+        className="left-0 w-full h-[100px] " 
+      />
+
+
     </section>
   );
 };

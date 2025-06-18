@@ -25,7 +25,7 @@ const Information = () => {
     },
     {
       title : 'Cesión de Derechos Hereditarios',
-      img: info2,
+      img: info6,
       description: 'Ocurrido el fallecimiento de una persona, sus herederos legitimarios (ascendientes, descendientes y cónyuge) quedan investidos de la calidad de herederos de pleno derecho desde el día del fallecimiento, y podrán ceder la universalidad de sus derechos sucesorios sin necesidad de contar previamente la declaratoria de herederos y deberán formalizarlo mediante la escritura pública.'
     },
     {
@@ -45,7 +45,7 @@ const Information = () => {
     },
     {
       title : 'Testamento',
-      img: info6,
+      img: info2,
       description: 'Resulta de suma importancia el asesoramiento de un escribano a la hora de decidir disponer de sus bienes para después de su fallecimiento. Tanto a los efectos de cumplir con las formalidades como para conocer sobre las opciones legales que mejor se adecuen a su voluntad.'
     },
     {

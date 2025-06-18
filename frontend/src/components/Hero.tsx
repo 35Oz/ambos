@@ -44,12 +44,12 @@ const Hero = () => {
         </motion.div>
       </div>
  
-      <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 w-[90%] md:w-full max-w-2xl">
+      <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 w-[90%] md:w-full max-w-xl">
         <div className="bg-[#ffe7a8] border-2 rounded-lg border-black text-center py-3 md:py-4 px-4">
           <p className="text-sm md:text-lg font-medium text-black">
-            <span className="block md:inline">Teléfonos: 2198-8391 / 5950-3654</span>
+            <span className="block md:inline">Teléfono: 2198-8391</span>
             <span className="hidden md:inline"> | </span>
-            <span className="block md:inline">Horarios: Lunes a Viernes de 9 a 17hs.</span>
+            <span className="block md:inline">Horarios: Lunes a Viernes de 10 a 17hs.</span>
           </p>
         </div>
       </div>

@@ -22,7 +22,7 @@ const services = [
   {
     image: service2,
     title: 'Inmuebles',
-    description: 'Compraventa, hipoteca, donación, usufructo, propiedad horizontal, permuta, Fideicomisos, Protocolización de subastas, Habilitaciones comerciales.',
+    description: 'Compraventa, hipoteca, donación, usufructo, propiedad horizontal, permuta, Fideicomisos, Protocolización de subastas',
   },
   {
     image: service3,
