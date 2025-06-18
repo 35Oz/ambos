@@ -11,7 +11,7 @@ const Map = () => {
       className="h-[500px] "
     >
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.024498997771!2d-58.390474587452225!3d-34.60385175644388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac68efc1097%3A0x7373e95e8c36637d!2sUruguay%20485%2C%20C1015%20ABI%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1737063426501!5m2!1ses-419!2sar"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.257434074956!2d-58.398700923526334!3d-34.59765127295649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca95c1765849%3A0x2f00bd212a1c5251!2sAyacucho%20984%2C%20C1111AAD%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1750285700188!5m2!1ses-419!2sar"
         width="100%"
         height="100%"
         style={{ border: 0 }}

@@ -109,7 +109,7 @@ const Contact = () => {
         <Map />
       </motion.div>
       
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 ">
         <div className="flex flex-col md:flex-row justify-center items-start gap-32 max-w-6xl mx-auto">
           <motion.form
             initial={{ opacity: 0, x: -20 }}
@@ -219,14 +219,14 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="w-full md:w-1/2 space-y-12"
+            className="w-full md:w-1/2 space-y-12 content-center"
           >
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-6" >
               <div className="bg-black p-3 rounded-full">
                 <MapPin className="w-8 h-8 text-[#edbb5f]" />
               </div>
               <div >
-                <h3 className="font-semibold text-lg mb-2">NUESTRA OFICINA</h3>
+                <h3 className="font-semibold text-lg mb-2 ">NUESTRA OFICINA</h3>
                 <p className="text-gray-600">Ayacucho 984 6to A</p>
               </div>
             </div>
